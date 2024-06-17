@@ -1,11 +1,4 @@
-/*
-  Authors : bunchdevelopers (Rahul Jograna)
-  Website : https://bunchdevelopers.com/
-  App Name : ionic6Template Pack
-  This App Template Source code is licensed as per the
-  terms found in the Website https://bunchdevelopers.com/license
-  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
-*/
+
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 declare var google: any;
 @Component({
@@ -319,10 +312,10 @@ export class NearMePage implements OnInit {
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
       var mapType = new google.maps.StyledMapType(style, { name: 'Grayscale' });
       const cityCircle = new google.maps.Circle({
-        strokeColor: "#F78407",
+        strokeColor: "#0e8f99",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#F78407",
+        fillColor: "#0e8f99",
         fillOpacity: 0.35,
         map,
         center: centerCords,
