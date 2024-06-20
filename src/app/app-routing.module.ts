@@ -92,7 +92,8 @@ const routes: Routes = [
   {
     path: 'book-appointment',
     loadChildren: () => import('./pages/book-appointment/book-appointment.module').then(m => m.BookAppointmentPageModule)
-  },  {
+  },
+  {
     path: 'daily-work-report',
     loadChildren: () => import('./pages/daily-work-report/daily-work-report.module').then( m => m.DailyWorkReportPageModule)
   },
@@ -103,7 +104,24 @@ const routes: Routes = [
   {
     path: 'helpdesk',
     loadChildren: () => import('./pages/helpdesk/helpdesk.module').then( m => m.HelpdeskPageModule)
-  }
+  },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./pages/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'monthly-work-report',
+    loadChildren: () => import('./pages/monthly-work-report/monthly-work-report.module').then( m => m.MonthlyWorkReportPageModule)
+  },
+  {
+    path: 'client-list',
+    loadChildren: () => import('./pages/client-list/client-list.module').then( m => m.ClientListPageModule)
+  },
+  {
+    path: 'tokens',
+    loadChildren: () => import('./pages/tokens/tokens.module').then( m => m.TokensPageModule)
+  },
+
 
 
 ];

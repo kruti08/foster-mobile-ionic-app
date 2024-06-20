@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>monthly-work-report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="sliders2 custom-modal" (click)="presentModal()" id="open-action-sheet">
+    <div
+      class="categoryIcon"
+      (click)="goToBarberProfile()"
+      *ngFor="let item of company"
+    >
+      <div class="imgs">
+        <div class="back_image bg_image">
+          <img src="{{item.img}}" alt="{{item.name}}" class="small_image"/>
+        </div>
+      </div>
+      <p class="name">{{item.name}}</p>
+      <p class="name">{{item.number}}</p>
+    </div>
+  </div>
+</ion-content>
+
