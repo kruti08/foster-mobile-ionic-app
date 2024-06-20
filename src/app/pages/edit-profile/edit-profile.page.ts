@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-profile',
@@ -9,9 +10,14 @@ import { ActionSheetController, NavController } from '@ionic/angular';
 })
 export class EditProfilePage implements OnInit {
 
+  users=[
+    {profile: 'assets/imgs/users/avatar-1.jpg', name: 'Rumit Vaghela', email: 'rumitv@keryar.com', role: 'CEO'}
+  ]
+
   constructor(
     private actionSheetCtrl: ActionSheetController,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -19,6 +25,10 @@ export class EditProfilePage implements OnInit {
 
   goBack() {
     this.navCtrl.back()
+  }
+
+  handleChangePassword() {
+    this.router.navigate(['change-password'])
   }
 
   async getImage() {

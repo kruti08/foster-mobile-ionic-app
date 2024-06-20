@@ -1,0 +1,50 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="seg_id" mode="md">
+      <ion-segment-button [value]="1">
+        <ion-label>Tokens</ion-label>
+      </ion-segment-button>
+      <ion-segment-button [value]="2">
+        <ion-label>Daily Works</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div *ngIf="seg_id == 1">
+      <div class="searchbar">
+        <ion-input type="text" placeholder="Search messages.."></ion-input>
+        <ion-icon name="search"></ion-icon>
+      </div>
+
+      <div class="content_div">
+        <div class="review_div" *ngFor="let item of clients">
+          <div class="bg_image back_image">
+            <img src="{{item.img}}" alt="" />
+          </div>
+          <div class="review_detail">
+            <div class="user_detail">
+              <ion-label>{{item.name}}</ion-label>
+              <div>
+                <ion-lable>{{item.designer}}</ion-lable>
+              </div>
+            </div>
+            <div class="review_content">{{item.title}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="seg_id == 2"></div>
+  </div>
+</ion-content>

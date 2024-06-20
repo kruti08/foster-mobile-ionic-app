@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>client-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar placeholder="Search"></ion-searchbar>
+  <div class="request">
+    <ion-label>30 Requests</ion-label>
+  </div>
+
+  <div *ngFor="let item of clientList">
+    <ion-item lines="none">
+      <ion-thumbnail>
+        <img src="{{item.img}}" />
+      </ion-thumbnail>
+      <div class="content">
+        <ion-label class="name">{{item.name}}</ion-label>
+        <ion-label class="req">{{item.company}}</ion-label>
+        <ion-label class="req">
+          <ion-icon
+            color="secondary"
+            name="logo-facebook"
+            class="small-image"
+          ></ion-icon>
+          <ion-icon
+            color="success"
+            name="logo-instagram"
+            class="small-image"
+          ></ion-icon>
+          <ion-icon
+            color="success"
+            name="logo-whatsapp"
+            class="small-image"
+          ></ion-icon>
+        </ion-label>
+      </div>
+      <ion-icon
+        name="calendar-number-outline"
+        slot="end"
+        color="primary"
+        class="close"
+      ></ion-icon>
+      <ion-icon
+        name="close-outline"
+        slot="end"
+        color="dark"
+        class="check"
+        (click)="onMatch()"
+      ></ion-icon>
+    </ion-item>
+    <hr />
+  </div>
+</ion-content>

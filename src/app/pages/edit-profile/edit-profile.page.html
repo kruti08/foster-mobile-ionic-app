@@ -1,46 +1,42 @@
-<!--
-  Authors : bunchdevelopers (Rahul Jograna)
-  Website : https://bunchdevelopers.com/
-  App Name : ionic6Template Pack
-  This App Template Source code is licensed as per the
-  terms found in the Website https://bunchdevelopers.com/license
-  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
- -->
 <ion-header mode="ios" class="ion-no-border">
   <ion-toolbar>
     <ion-button (click)="goBack()" fill="clear" mode="ios" slot="start">
-      <ion-icon name="arrow-back-outline" ></ion-icon>
+      <ion-icon name="arrow-back-outline"></ion-icon>
     </ion-button>
     <ion-title>Edit Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="edit_profile_main_content">
+  <div
+    class="edit_profile_main_content"
+    *ngFor="let user of users; let i = index"
+  >
+    <div (click)="getImage()">
+      <img class="user_image bg_image" src="{{user.profile}}" alt="" />
+    </div>
 
-
-    <div class="user_image bg_image" (click)="getImage()"
-      [style.backgroundImage]="'url(assets/imgs/selfies.jpg)'"></div>
-
-    <div class="input_box">
-      <ion-input type="text" placeholder="First Name" ></ion-input>
+    <div class="pswd">
+      <ion-label class="pswd1" (click)="handleChangePassword()"> Change Password </ion-label>
     </div>
 
     <div class="input_box">
-      <ion-input type="text" placeholder="Last Name" ></ion-input>
+      <ion-label class="pswd1">Name</ion-label>
+      <ion-input type="text">{{user.name}}</ion-input>
     </div>
 
     <div class="input_box">
-      <ion-input type="text" placeholder="Email ID" disabled ></ion-input>
+      <ion-label class="pswd1">Email</ion-label>
+      <ion-input type="text">{{user.email}}</ion-input>
     </div>
 
     <div class="input_box">
-      <ion-input type="text" placeholder="Mobile No" ></ion-input>
+      <ion-label class="pswd1">Role</ion-label>
+      <ion-input type="text">{{user.role}}</ion-input>
     </div>
 
     <ion-button expand="block" mode="ios" (click)="goBack()">
       Save Profile
     </ion-button>
-
   </div>
 </ion-content>
