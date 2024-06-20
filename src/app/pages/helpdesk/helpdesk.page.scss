@@ -1,0 +1,111 @@
+ion-content {
+  .upper_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+
+    .head_lbl {
+      font-size: 20px;
+      font-family: "bold";
+    }
+
+    
+  }
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+
+.segment_div {
+  margin-top: 32px;
+
+  ion-segment {
+    background: transparent;
+
+    ion-segment-button {
+      padding: 8px 0px;
+      --border-radius: 30px;
+      --indicator-color: #000 !important;
+      --indicator-box-shadow: transparent !important;
+      --color-checked: white;
+      --background: #ffff;
+      margin: 10px 0;
+    }
+  }
+}
+
+.active {
+  margin-top: 24px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .bg_image {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      position: relative;
+      //   .online {
+      //     position: absolute;
+      //     height: 12px;
+      //     width: 12px;
+      //     background: green;
+      //     border: 2px solid #fff;
+      //     border-radius: 50%;
+      //     bottom: 8px;
+      //     right: -5px;
+      //   }
+    }
+
+    .left {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .name_lbl {
+        font-family: "semi-bold";
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .msg_lbl {
+        font-size: 13px;
+        color: #c2c2cb;
+      }
+    }
+
+    .right {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .time_lbl {
+        font-size: 13px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+
+      .circle {
+        background: #eb445a;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        color: #fff;
+        display: inline-block;
+        font-weight: bold;
+        line-height: 20px;
+        margin-right: 5px;
+        text-align: center;
+        width: 25px;
+        font-size: 10px;
+      }
+    }
+  }
+}

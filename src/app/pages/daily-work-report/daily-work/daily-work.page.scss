@@ -1,0 +1,37 @@
+ion-content {
+  .main_content {
+    display: flex;
+    flex-direction: column;
+
+    .head_lbl {
+      margin: 16px 0 10px 0;
+      font-size: 18px;
+      font-family: "semi-bold";
+    }
+
+    .sub_lbl {
+      font-size: 14px;
+      color: grey;
+      margin-bottom: 16px;
+    }
+
+    .text_lbl {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    ion-row {
+      margin-bottom: 10px;
+      ion-col {
+        .service {
+          display: flex;
+          align-items: center;
+
+          ion-icon {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

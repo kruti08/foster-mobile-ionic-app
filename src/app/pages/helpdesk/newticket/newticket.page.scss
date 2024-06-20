@@ -1,0 +1,59 @@
+.ion-padding{
+.main-content{
+    display: flex;
+    flex-direction: column;
+    .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    img {
+      width: 80%;
+      margin: 10px;
+    }
+    ion-card {
+      padding: 20px;
+      width: 85%;
+
+      .text {
+        margin: 10px 0px;
+        ion-label {
+          color: gray;
+          font-size: medium;
+          font-weight: 200;
+        }
+        .t1{
+            height: 100px;
+            width: 200px;
+        }
+        ion-input {
+          border: 2px solid black;
+          border-radius: 15px;
+          padding: 7px !important;
+          font-size: 16px;
+          font-family: "semi-bold";
+          margin: 5px 0px;
+        }
+      }
+      ion-button {
+        width: 100%;
+        color: white;
+        margin: 10px 0px;
+      }
+      .text-div {
+        text-align: center;
+        .text {
+          font-size: 14px;
+          color: gray;
+          span {
+            font-family: "semi-bold";
+            color: var(--ion-color-primary);
+          }
+        }
+      }
+    }
+  }
+
+}
+}

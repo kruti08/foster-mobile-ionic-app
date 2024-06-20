@@ -30,4 +30,10 @@ export class ProfilePage implements OnInit {
   invite() {
     this.router.navigate(['invite']);
   }
+  handleHelpDesk(){
+    this.router.navigate(['helpdesk'])
+  }
+  handleDailyWork(){
+    this.router.navigate(['daily-work-report'])
+  }
 }

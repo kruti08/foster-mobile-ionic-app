@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Generate Ticket</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ <ion-content class="ion-padding">
+  <div class="main_content">
+    <div class="row">
+    <ion-card>
+      <div class="text">
+        <ion-label>Title</ion-label>
+        <ion-input placeholder="Enter title"></ion-input>
+        <!-- <ion-input class="ion-no-padding" type="text"></ion-input> -->
+      </div>
+      <div class="text">
+        <ion-label>Select Employee</ion-label>
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit">
+              <ion-select-option value="apples">Apples</ion-select-option>
+              <ion-select-option value="oranges">Oranges</ion-select-option>
+              <ion-select-option value="bananas">Bananas</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="t1">
+        <ion-label>Description</ion-label>
+        <ion-input placeholder="Write here..."></ion-input>
+        <!-- <ion-input class="ion-no-padding" type="phone"></ion-input> -->
+        </div>
+      <ion-button shape="round">
+       Submit
+      </ion-button>
+    </ion-card>
+  </div>
+  </div>
+</ion-content> 

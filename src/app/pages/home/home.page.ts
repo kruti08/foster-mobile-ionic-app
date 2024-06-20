@@ -11,53 +11,74 @@ export class HomePage implements OnInit {
   slideOpts = {
     slidesPerView: 1.2,
   };
-  salon = [
+  dashboard1 = [
     {
-      img: 'assets/imgs/sliders/1.jpg',
-      name: 'Reflection Beauty Salon'
+      img: 'assets/imgs/icon-gif/employee.gif',
+      name: 'Employee List',
+      number: 18,
     },
     {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Elegance - The Unisex Salon'
+      img: 'assets/imgs/icon-gif/complete.gif',
+      name: 'Complete Token',
+      number: 106,
     },
     {
-      img: 'assets/imgs/sliders/3.jpg',
-      name: 'Pawan Hair Salon'
+      img: 'assets/imgs/icon-gif/incomplete.gif',
+      name: 'Pending Token',
+      number: 7,
     },
     {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Neeva Unisex Salon'
+      img: 'assets/imgs/icon-gif/client.gif',
+      name: 'Total Clients',
+      number: 41,
     },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Ilora Beauty Parlour'
-    },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Precise the family saloon'
-    },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Toppers'
-    },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Empire the unisex salon'
-    },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Nikhar Beauty Parlour'
-    },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Toppers'
-    },
-    {
-      img: 'assets/imgs/sliders/2.jpg',
-      name: 'Empire the unisex salon'
-    }
-  ];
 
+  ];
+  dashboard2 = [
+    {
+      img: 'assets/imgs/icon-gif/ces-complete.gif',
+      name: 'CSE Token Completed',
+      number: 0,
+    },
+    {
+      img: 'assets/imgs/icon-gif/incomplete-ces.gif',
+      name: 'CSE Incomplete Token',
+      number: 0,
+    },
+    {
+      img: 'assets/imgs/icon-gif/processing.gif',
+      name: 'Processing Token',
+      number: 6,
+    },
+    {
+      img: 'assets/imgs/icon-gif/daily.gif',
+      name: 'Daily Work',
+      number: 704,
+    },
+
+  ];
+  todoList = [
+    {
+      name: 'John',
+      date: '31/05/2024',
+    },
+    {
+      name: 'Leo',
+      date: '31/05/2024',
+    },
+    {
+      name: 'John',
+      date: '31/05/2024',
+    },
+    {
+      name: 'Leo',
+      date: '31/05/2024',
+    },
+    {
+      name: 'John',
+      date: '31/05/2024',
+    },
+  ]
   userList = [
     {
       img: 'assets/imgs/avtar/user1.png',

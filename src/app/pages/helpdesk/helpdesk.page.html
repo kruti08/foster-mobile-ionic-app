@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header">Helpdesk</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="btn">
+    <ion-button slot="end" value="date" (click)="handleticket()">
+      <ion-label>New Ticket</ion-label>
+    </ion-button>
+   </div>
+
+   <div class="segment_div">
+    <ion-segment [(ngModel)]="tabs" mode="ios">
+      <ion-segment-button value="message">
+        <ion-label>All</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="active">
+        <ion-label>Pending</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="group">
+        <ion-label>Processing</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calls">
+        <ion-label>Completed</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="active" *ngIf="tabs == 'message'">
+
+    <div class="content">
+      <div class="bg_image" [style.backgroundImage]="'url(assets/imgs/g1.jpg)'"></div>
+      <div class="left">
+        <ion-label class="name_lbl">Divyangi Soni</ion-label>
+        <ion-label class="msg_lbl">Created by: June 19</ion-label>
+      </div>
+      <!-- <div class="right" slot="end">
+        <ion-label class="time_lbl">10:30</ion-label>
+        <div class="circle">10</div>
+      </div> -->
+    </div>
+  </div>
+</ion-content>

@@ -85,3 +85,15 @@ ion-modal.successModal {
   --border-radius: 20px;
   padding: 50px;
 }
+ion-modal.custom_modal_bottom {
+  .modal-wrapper {
+    width: 100% !important;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  &.bottom {
+    align-items: flex-end !important;
+  }
+  --height: 600px;
+  align-items: flex-end;
+}

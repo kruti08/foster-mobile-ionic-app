@@ -14,7 +14,7 @@ const routes: Routes = [
       },
       {
         path: 'tab2',
-        loadChildren: () => import('../near-me/near-me.module').then(m => m.NearMePageModule)
+        loadChildren: () => import('../daily-work-report/daily-work-report.module').then(m => m.DailyWorkReportPageModule)
       },
       {
         path: 'tab3',

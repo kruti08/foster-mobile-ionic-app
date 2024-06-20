@@ -92,7 +92,19 @@ const routes: Routes = [
   {
     path: 'book-appointment',
     loadChildren: () => import('./pages/book-appointment/book-appointment.module').then(m => m.BookAppointmentPageModule)
+  },  {
+    path: 'daily-work-report',
+    loadChildren: () => import('./pages/daily-work-report/daily-work-report.module').then( m => m.DailyWorkReportPageModule)
+  },
+  {
+    path: 'help',
+    loadChildren: () => import('./pages/help/help.module').then( m => m.HelpPageModule)
+  },
+  {
+    path: 'helpdesk',
+    loadChildren: () => import('./pages/helpdesk/helpdesk.module').then( m => m.HelpdeskPageModule)
   }
+
 
 ];
 @NgModule({
