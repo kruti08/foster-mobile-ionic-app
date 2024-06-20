@@ -33,7 +33,7 @@ export class HelpdeskPage implements OnInit {
   async handleticket(){
     const modal = await this.modalController.create({
       component: NewticketPage,
-      cssClass: 'custom_modal_bottom',
+      cssClass: 'custom_modal',
       componentProps: { value: 123 },
     });
 

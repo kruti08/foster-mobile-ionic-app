@@ -21,7 +21,7 @@ ion-content {
 }
 
 .segment_div {
-  margin-top: 32px;
+  margin-top: 10px;
 
   ion-segment {
     background: transparent;
@@ -45,6 +45,7 @@ ion-content {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+    margin-left: 10px;
 
     .bg_image {
       height: 50px;
@@ -64,7 +65,7 @@ ion-content {
     }
 
     .left {
-      margin-left: 10px;
+      margin-left: 15px;
       display: flex;
       flex-direction: column;
 

@@ -8,36 +8,39 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
- <ion-content class="ion-padding">
+<ion-content class="ion-padding">
   <div class="main_content">
     <div class="row">
-    <ion-card>
-      <div class="text">
-        <ion-label>Title</ion-label>
-        <ion-input placeholder="Enter title"></ion-input>
-        <!-- <ion-input class="ion-no-padding" type="text"></ion-input> -->
-      </div>
-      <div class="text">
-        <ion-label>Select Employee</ion-label>
-        <ion-list>
+      <ion-card class="card_content">
+        <div>
+          <div class="text">
+            <ion-label>Title</ion-label>
+          </div>
+          <ion-input placeholder="Enter title" class="border"></ion-input>
+          <!-- <ion-input class="ion-no-padding" type="text"></ion-input> -->
+        </div>
+        <div class="t1 text">
+          <ion-label>Select Employee</ion-label>
           <ion-item>
-            <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit">
-              <ion-select-option value="apples">Apples</ion-select-option>
-              <ion-select-option value="oranges">Oranges</ion-select-option>
-              <ion-select-option value="bananas">Bananas</ion-select-option>
+            <ion-select justify="start" label-placement="floating" fill="outline" placeholder="Select Employee">
+              <ion-select-option value="1">Divyangi Soni</ion-select-option>
+              <ion-select-option value="2">Kajal Agrawal</ion-select-option>
+              <ion-select-option value="3">Shailesh Parmar</ion-select-option>
             </ion-select>
           </ion-item>
-        </ion-list>
-      </div>
-      <div class="t1">
-        <ion-label>Description</ion-label>
-        <ion-input placeholder="Write here..."></ion-input>
-        <!-- <ion-input class="ion-no-padding" type="phone"></ion-input> -->
+
+
         </div>
-      <ion-button shape="round">
-       Submit
-      </ion-button>
-    </ion-card>
+        <div class="t2 text">
+          <ion-label>Description</ion-label>
+          <ion-textarea placeholder="Write here..." rows="10" class="border"></ion-textarea>
+          <!-- <ion-input class="ion-no-padding" type="phone"></ion-input> -->
+        </div>
+
+        <ion-button shape="round">
+          Submit
+        </ion-button>
+      </ion-card>
+    </div>
   </div>
-  </div>
-</ion-content> 
+</ion-content>
