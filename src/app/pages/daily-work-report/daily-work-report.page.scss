@@ -199,7 +199,8 @@
     }
 
     .segment_div {
-
+        display: flex;
+        flex-direction: row;
         // margin-top: 10px;
         ion-segment {
             background: transparent;

@@ -1,17 +1,20 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { ModalController } from "@ionic/angular";
-import { EditProfilePage } from '../edit-profile/edit-profile.page';
-import { DailyWorkPage } from './daily-work/daily-work.page';
+import { EditProfilePage } from "../edit-profile/edit-profile.page";
+import { DailyWorkPage } from "./daily-work/daily-work.page";
 declare var google: any;
 
 @Component({
-  selector: 'app-daily-work-report',
-  templateUrl: './daily-work-report.page.html',
-  styleUrls: ['./daily-work-report.page.scss'],
+  selector: "app-daily-work-report",
+  templateUrl: "./daily-work-report.page.html",
+  styleUrls: ["./daily-work-report.page.scss"],
 })
 export class DailyWorkReportPage implements OnInit {
+  @ViewChild("popover") popover;
 
-  @ViewChild('map', { static: true }) mapElement: ElementRef;
+  isOpen = false;
+
+  @ViewChild("map", { static: true }) mapElement: ElementRef;
   loading: boolean = true;
   map: any;
   slideOpts = {
@@ -19,85 +22,85 @@ export class DailyWorkReportPage implements OnInit {
   };
   userList = [
     {
-      img: 'assets/imgs/avtar/user1.png',
-      name: 'All',
-      status: '0',
-      time: '6:00 pm',
-      callType: 'call',
-      callTime: '7 May, 8:42 pm',
-      callStatus: '1',
+      img: "assets/imgs/avtar/user1.png",
+      name: "All",
+      status: "0",
+      time: "6:00 pm",
+      callType: "call",
+      callTime: "7 May, 8:42 pm",
+      callStatus: "1",
     },
     {
-      img: 'assets/imgs/avtar/user1.png',
-      name: 'Priya Dave',
-      status: '0',
-      time: '6:00 pm',
-      callType: 'call',
-      callTime: '7 May, 8:42 pm',
-      callStatus: '1',
+      img: "assets/imgs/avtar/user1.png",
+      name: "Priya Dave",
+      status: "0",
+      time: "6:00 pm",
+      callType: "call",
+      callTime: "7 May, 8:42 pm",
+      callStatus: "1",
     },
     {
-      img: 'assets/imgs/avtar/user2.png',
-      name: 'Vishal Prajapati',
-      status: '1',
-      time: '5:00 pm',
-      callType: 'call',
-      callTime: '5 May, 6:00 pm',
-      callStatus: '1',
+      img: "assets/imgs/avtar/user2.png",
+      name: "Vishal Prajapati",
+      status: "1",
+      time: "5:00 pm",
+      callType: "call",
+      callTime: "5 May, 6:00 pm",
+      callStatus: "1",
     },
     {
-      img: 'assets/imgs/avtar/user3.png',
-      name: 'Yaksh Patel',
-      status: '2',
-      time: '3:30 pm',
-      callType: 'call',
-      callTime: '1 April, 8:00 pm',
-      callStatus: '1',
+      img: "assets/imgs/avtar/user3.png",
+      name: "Yaksh Patel",
+      status: "2",
+      time: "3:30 pm",
+      callType: "call",
+      callTime: "1 April, 8:00 pm",
+      callStatus: "1",
     },
     {
-      img: 'assets/imgs/avtar/user4.png',
-      name: 'Marvin Parmar',
-      status: '0',
-      time: '12:30 pm',
-      callType: 'video',
-      callTime: '25 April, 8:00 am',
-      callStatus: '0',
+      img: "assets/imgs/avtar/user4.png",
+      name: "Marvin Parmar",
+      status: "0",
+      time: "12:30 pm",
+      callType: "video",
+      callTime: "25 April, 8:00 am",
+      callStatus: "0",
     },
     {
-      img: 'assets/imgs/avtar/user5.png',
-      name: 'Kishan Panchal',
-      status: '1',
-      time: 'Yesterday',
-      callType: 'video',
-      callTime: '23 April, 7:00 pm',
-      callStatus: '1',
+      img: "assets/imgs/avtar/user5.png",
+      name: "Kishan Panchal",
+      status: "1",
+      time: "Yesterday",
+      callType: "video",
+      callTime: "23 April, 7:00 pm",
+      callStatus: "1",
     },
     {
-      img: 'assets/imgs/avtar/user6.png',
-      name: 'Jenish Vaghela',
-      status: '2',
-      time: 'Yesterday',
-      callType: 'call',
-      callTime: '19 April, 8:42 pm',
-      callStatus: '1',
+      img: "assets/imgs/avtar/user6.png",
+      name: "Jenish Vaghela",
+      status: "2",
+      time: "Yesterday",
+      callType: "call",
+      callTime: "19 April, 8:42 pm",
+      callStatus: "1",
     },
     {
-      img: 'assets/imgs/avtar/user7.png',
-      name: 'Mahir Rana',
-      status: '2',
-      time: 'Yesterday',
-      callType: 'video',
-      callTime: '19 April, 6:42 pm',
-      callStatus: '0',
+      img: "assets/imgs/avtar/user7.png",
+      name: "Mahir Rana",
+      status: "2",
+      time: "Yesterday",
+      callType: "video",
+      callTime: "19 April, 6:42 pm",
+      callStatus: "0",
     },
     {
-      img: 'assets/imgs/avtar/user8.png',
-      name: 'Dhairya Patel',
-      status: '2',
-      time: '07/05/20',
-      callType: 'video',
-      callTime: '17 April, 5:00 pm',
-      callStatus: '0',
+      img: "assets/imgs/avtar/user8.png",
+      name: "Dhairya Patel",
+      status: "2",
+      time: "07/05/20",
+      callType: "video",
+      callTime: "17 April, 5:00 pm",
+      callStatus: "0",
     },
   ];
 
@@ -108,21 +111,17 @@ export class DailyWorkReportPage implements OnInit {
     }, 1000);
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   async handleDailyWork() {
     const modal = await this.modalController.create({
       component: DailyWorkPage,
-      cssClass: 'custom_modal_bottom',
+      cssClass: "custom_modal_bottom",
       componentProps: { value: 123 },
     });
 
     await modal.present();
-
   }
-
-
 
   // getULocation() {
   //   let map;
@@ -288,20 +287,16 @@ export class DailyWorkReportPage implements OnInit {
 
   // }
 
-
-  allIndividuals() {
-
+  presentPopover(e: Event) {
+    this.popover.event = e;
+    this.isOpen = true;
   }
 
-  goToBarberProfile() {
+  allIndividuals() {}
 
-  }
+  goToBarberProfile() {}
 
-  allSalon() {
+  allSalon() {}
 
-  }
-
-  openSalon() {
-
-  }
+  openSalon() {}
 }

@@ -6,14 +6,25 @@
 
 <ion-content>
   <div class="loader">
-    <ion-spinner name="crescent" *ngIf="loading === true" color="primary"></ion-spinner>
+    <ion-spinner
+      name="crescent"
+      *ngIf="loading === true"
+      color="primary"
+    ></ion-spinner>
   </div>
   <div class="main_content_div">
-    <div class="div1" id='item'>
+    <div class="div1" id="item">
       <div class="sliders2">
-        <div class="categoryIcon" (click)="goToBarberProfile()" *ngFor="let item of userList">
+        <div
+          class="categoryIcon"
+          (click)="goToBarberProfile()"
+          *ngFor="let item of userList"
+        >
           <div class="imgs">
-            <div class="back_image bg_image" [style.backgroundImage]="'url( '+ item.img +' )'"></div>
+            <div
+              class="back_image bg_image"
+              [style.backgroundImage]="'url( '+ item.img +' )'"
+            ></div>
           </div>
           <p class="name">{{item.name}}</p>
         </div>
@@ -27,38 +38,47 @@
             <ion-segment-button value="active">
               <ion-label>Tokens</ion-label>
             </ion-segment-button>
-            <div class="btn">
-              <ion-button value="date">
-                <ion-label>Date</ion-label>
-              </ion-button>
-
-            </div>
           </ion-segment>
+          <div class="btn">
+            <ion-button (click)="presentPopover($event)"> Date </ion-button>
+            <ion-popover
+              #popover
+              [isOpen]="isOpen"
+              (didDismiss)="isOpen = false"
+            >
+              <ng-template>
+                <!-- <ion-content class="ion-padding">Hello World!</ion-content> -->
+                <ion-datetime></ion-datetime>
+              </ng-template>
+            </ion-popover>
+          </div>
         </div>
       </div>
     </div>
     <div class="active" *ngIf="tabs == 'message'">
-
-      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8, 9 ,10,11,12,13]" (click)="handleDailyWork()">
-        <div class="bg_image" [style.backgroundImage]="'url(assets/imgs/g1.jpg)'">
+      <div
+        class="content"
+        *ngFor="let item of [1,2,3,4,5,6,7,8, 9 ,10,11,12,13]"
+        (click)="handleDailyWork()"
+      >
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/imgs/g1.jpg)'"
+        >
           <div class="online"></div>
         </div>
-        
+
         <div class="left">
           <ion-label class="name_lbl">Upix Inc</ion-label>
           <ion-label class="msg_lbl">Post</ion-label>
           <ion-label class="desg_lbl">Kishan Panchal</ion-label>
         </div>
 
-        
-
         <div class="right" slot="end">
           <ion-label class="time_lbl">July 19</ion-label>
           <div class="circle">10</div>
         </div>
       </div>
-
     </div>
-
   </div>
 </ion-content>
